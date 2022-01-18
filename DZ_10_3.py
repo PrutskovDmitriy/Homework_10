@@ -12,22 +12,18 @@ class Cell:
         return f'{self.nums}'
 
     def __add__(self, other):
-        print(f'Sum of cell is: ')
-        return Cell(self.nums + other.nums)
+        return f'Sum of cell is: {Cell(self.nums + other.nums)}'
 
     def __sub__(self, other):
-        print(f'Subtraction of cell is: ')
         if self.nums < other.nums:
             raise ValueError('Ячеек в 1ой клетке меньше, чем во 2ой, вычитание невозможно')
-        return Cell(self.nums - other.nums)
+        return f'Subtraction of cell is: {Cell(self.nums - other.nums)}'
 
     def __mul__(self, other):
-        print(f'Multiply of cell is: ')
-        return Cell(self.nums * other.nums)
+        return f'Multiply of cell is: {Cell(self.nums * other.nums)}'
 
     def __floordiv__(self, other):
-        print(f'Floordiv of cell is: ')
-        return Cell(self.nums // other.nums)
+        return f'Floordiv of cell is: {Cell(self.nums // other.nums)}'
 
 
 cell_1 = Cell(48)
